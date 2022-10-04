@@ -1,7 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
-import DropDownMenu from './dropdown.js'
+
 import React from "react";
+import NavBar from "./navBar.js";
+import BarAcross from './barAcross';
+import GameWindow from './gameWindow';
 
 function App() {
   
@@ -9,18 +12,17 @@ function App() {
     
     <div className="App">
     
-
-      <header className="App-header">
-      <div>
-      <DropDownMenu />
-       <h1> Kid Data Viz</h1>
-       </div>
-        <p>
-          enter description of project
-        </p>
+    
+    
+      
+      <BarAcross/>
+      <NavBar />
+      <BarAcross/>
+      <GameWindow/>
+      <BarAcross/>
+       
         
-        
-      </header>
+    
     </div>
   );
 }
