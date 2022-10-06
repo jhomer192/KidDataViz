@@ -1,9 +1,10 @@
-
+body{
+  background-color: #B28CCD;
+  color: white;
+}
 
 h1{
   text-align: center; 
-  color: orange;
-
-
+  background-color: #E66A85;
 }
 
