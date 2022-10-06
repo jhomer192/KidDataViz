@@ -2,8 +2,8 @@
 import './App.css';
 
 import React from "react";
-import NavBar from "./navBar.js";
-import GameWindow from './gameWindow';
+import NavBar from "./NavBar.js";
+import GameWindow from './GameWindow';
 
 function App() {
   
