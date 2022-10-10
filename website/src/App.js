@@ -2,27 +2,15 @@
 import './App.css';
 
 import React from "react";
-import NavBar from "./navBar.js";
-import BarAcross from './barAcross';
-import GameWindow from './gameWindow';
+import NavBar from "./NavBar.js";
+import GameWindow from './GameWindow';
 
 function App() {
   
   return (
-    
     <div className="App">
-    
-    
-    
-      
-      <BarAcross/>
       <NavBar />
-      <BarAcross/>
       <GameWindow/>
-      <BarAcross/>
-       
-        
-    
     </div>
   );
 }
