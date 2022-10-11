@@ -24,10 +24,11 @@ function Home() {
                 borderRadius: "10px"}}>
                 <Box sx={{
                     m: 2 ,textAlign: 'center'}}>
-                    <h1 sx={{m: 2}}>Welcome to Data4Kids!</h1>
+                    <h1>Welcome to Data4Kids!</h1>
                     <p>Our mission is to teach kids about data visualization through fun games and activities.
                         To get started, explore the different games on our website!</p>
-                    <Button sx={{backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}} href="/play" variant="contained">Start Playing!</Button>
+                    <Button sx={{backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
+                            href="/play" variant="contained">Start Playing!</Button>
                 </Box>
             </Box>
 
