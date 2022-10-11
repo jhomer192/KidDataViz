@@ -1,13 +1,18 @@
 import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
+
 function App() {
   const { unityProvider } = useUnityContext({
-    loaderUrl: "build/myunityapp.loader.js",
-    dataUrl: "build/myunityapp.data",
-    frameworkUrl: "build/myunityapp.framework.js",
-    codeUrl: "build/myunityapp.wasm",
+    loaderUrl: "build/crateclickerloader.js",
+    dataUrl: "build/crateclicker.data",
+    frameworkUrl: "build/crateclicker.framework.js",
+    codeUrl: "build/crateclicker.wasm",
   });
-
-  return <Unity unityProvider={unityProvider} />;
+  return (
+    <div>
+      <Unity unityProvider={unityProvider} />
+    </div>
+  );
 }
+export default App;
