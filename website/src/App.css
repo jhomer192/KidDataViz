@@ -1,10 +1,22 @@
 body{
   background-color: #B28CCD;
   color: white;
+  font-family: "Comic Sans MS";
 }
 
 h1{
-  text-align: center; 
-  background-color: #E66A85;
+  text-align: center;
 }
 
+a {
+  color: white;
+  font-family: "Comic Sans MS";
+}
+
+a:hover {
+  color: #8C87CD;
+}
+
+p{
+  font-size: 16pt;
+}
