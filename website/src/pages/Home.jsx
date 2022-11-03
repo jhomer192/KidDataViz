@@ -6,10 +6,10 @@ function Home() {
     return (
         <Box
             sx={{
-                mt: 3,
-                mb: 3,
+                mt: '80pt',
+                mb: 2,
                 backgroundColor: '#8C87CD',
-                height: '80%',
+                height: '100%',
                 borderTop: "10px solid #FFFFFF",
                 borderBottom: "10px solid #FFFFFF",
                 display: 'flex',
@@ -19,7 +19,7 @@ function Home() {
                 m: 4,
                 backgroundColor: '#E66A85',
                 height: '80%',
-                width: '60%',
+                width: '100%',
                 border: "10px solid #FFFFFF",
                 borderRadius: "10px"}}>
                 <Box sx={{
@@ -27,7 +27,7 @@ function Home() {
                     <h1>Welcome to Data4Kids!</h1>
                     <p>Our mission is to teach kids about data visualization through fun games and activities.
                         To get started, explore the different games on our website!</p>
-                    <Button sx={{backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
+                    <Button elevation={0} shadow='none' sx={{backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
                             href="/play" variant="contained">Start Playing!</Button>
                 </Box>
             </Box>
