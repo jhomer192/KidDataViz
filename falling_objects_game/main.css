@@ -20,7 +20,6 @@ body {
     margin-left: 20px;
 	border: 10px solid #000;
 }
-
 table {
     text-align: center;
     width: 390px;
@@ -80,10 +79,6 @@ button {
     background-color: red;
 }
 
-#data {
-    background-color: lightskyblue;
-}
-
 #left {
     background-color: pink;
     font-family: "Wingdings 3";
@@ -101,14 +96,4 @@ button {
 #gameover {
     margin: 50;
     font-size: 50px;
-}
-
-#chart {
-    width: 390px;
-    height: 390px;
-    margin-left: 5;
-    margin-right: 5;
-    margin-bottom: 5;
-    margin-top: -45;
-    padding: 0;
 }
