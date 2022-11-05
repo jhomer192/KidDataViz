@@ -1,9 +1,11 @@
-//Starting Point
 
+
+//Starting Point
 var block = document.getElementById('block'),
   brick = document.getElementById('brick'),
   path = document.getElementById('path'),
-  gameover = document.getElementById('gameover')
+  gameover = document.getElementById('gameover'),
+  chart = document.getElementById('chart')
 var blockRect = block.getBoundingClientRect(),
   brickRect = brick.getBoundingClientRect()
 var left = 10;
@@ -53,6 +55,7 @@ function moveleft(elem) {
 }
 
 var colors = ['pink', 'blue', 'purple', 'green', 'grey', 'yellow', 'orange']
+var dataMap = {}
 
 function movedown() {
   var top = 0
@@ -63,6 +66,13 @@ function movedown() {
       brickRect = brick.getBoundingClientRect()
     if (block.style.top === '375px' && blockRect.right > brickRect.left && blockRect.left < brickRect.right) {
       clearInterval(id)
+      // count number of each block caught
+      if (dataMap[block.style.backgroundColor]) {
+        dataMap[block.style.backgroundColor]++;
+      }
+      else {
+        dataMap[block.style.backgroundColor] = 1;
+      }
       updateScore()
       block.style.top = 10;
       block.style.left = Math.floor((Math.random() * 390) + 5);
@@ -87,7 +97,36 @@ function reset() {
   document.getElementById("gameover").innerHTML = "";
   score = 0
   document.getElementById("score").innerHTML = score;
+  document.getElementById("chart").innerHTML = "";
+  dataMap = {}
+}
 
+function getData() {
+  document.getElementById("gameover").innerHTML = "";
+  anychart.onDocumentReady(function () {
+    // set the data
+    var data = {
+      header: ["Name", "Blocks caught"],
+      rows: [
+        ["Pink", dataMap["pink"]],
+        ["Blue", dataMap["blue"]],
+        ["Purple", dataMap["purple"]],
+        ["Green", dataMap["green"]],
+        ["Grey", dataMap["grey"]],
+        ["Yellow", dataMap["yellow"]],
+        ["Orange", dataMap["orange"]]
+      ]
+    };
+    // create the chart
+    var chart = anychart.bar();
+    // add data
+    chart.data(data);
+    // set the chart title
+    chart.title("The number of blocks caught per color");
+    // draw
+    chart.container("chart");
+    chart.draw();
+  });
 }
 
 //Swipe Functionality
@@ -115,7 +154,6 @@ function handleTouchMove(evt) {
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
     if (xDiff > 0) {
       moveleft(brick)
-      console.log('hi')
     } else {
       moveright(brick)
     }
