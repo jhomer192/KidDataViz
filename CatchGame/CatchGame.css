@@ -84,16 +84,6 @@ button {
     background-color: lightskyblue;
 }
 
-#left {
-    background-color: pink;
-    font-family: "Wingdings 3";
-}
-
-#right {
-    background-color: orange;
-    font-family: "Wingdings 3";
-}
-
 #score {
     color: red;
 }
