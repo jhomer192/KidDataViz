@@ -3,6 +3,8 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math Game</title>
+    <!-- Data Viz Chart -->
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:700"
@@ -11,16 +13,20 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body style="text-align:center;">
     <div class="container">
-      <h3>Fill In The Blank With Correct Number Or Operator</h3>
+      <h3>Fill in the blank with the correct number.</h3>
+      <label id = "qLeft">
+        questions left here:
+      </label>
       <div id="question"></div>
       <button id="submit-btn">Submit</button>
-      <p id="error-msg">Some Demo Error Message</p>
+      <p id="error-msg">Error</p>
     </div>
-    <div class="controls-container">
+    <div id = "container" class="controls-container">
       <p id="result"></p>
       <button id="start-btn">Start Game</button>
+      <button id="dataviz-btn">Show Data Viz</button>
     </div>
     <!-- Script -->
     <script src="script.js"></script>
