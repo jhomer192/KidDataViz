@@ -131,7 +131,7 @@ function graph() {
   ];
   var layout = { title: "Game Scores" };
 
-  Plotly.newPlot("myPlot", data, layout);
+  //Plotly.newPlot("myPlot", data, layout);
 }
 //--------------------------------------------------------------------------------------------------------------------------------
 

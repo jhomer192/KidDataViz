@@ -1,52 +1,49 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+
 
 function Play() {
     return (
         <Box
             sx={{
-                mt: 3,
-                mb: 3,
+                mt: "80pt",
+                mb: "40pt",
+                height:"200pt",
                 backgroundColor: '#8C87CD',
-                height: '500px',
                 borderTop: "10px solid #FFFFFF",
-                borderBottom: "10px solid #FFFFFF",
-                display: 'flex',
-                justifyContent: 'center'}}>
-            <Container sx={{
-                backgroundColor: '#7CB65C',
-                borderRight: "10px solid #FFFFFF",
-                borderLeft: "10px solid #FFFFFF",
-                }}>
-                <Button sx={{
-                    m: 1,
-                    backgroundColor: "#EF7F4F",
-                    fontSize: '16pt',
-                    width: '100%',
-                    height: '30%',
-                    fontFamily: "Comic Sans MS"}}
-                        href="/play" variant="contained">Category 1</Button>
-                <Button sx={{
-                    m: 1,
-                    backgroundColor: "#EF7F4F",
-                    fontSize: '16pt',
-                    width: '100%',
-                    height: '30%',
-                    fontFamily: "Comic Sans MS"}}
-                        href="/play" variant="contained">Category 2</Button>
-                <Button sx={{
-                    m: 1,
-                    backgroundColor: "#EF7F4F",
-                    fontSize: '16pt',
-                    width: '100%',
-                    height: '30%',
-                    fontFamily: "Comic Sans MS"}}
-                        href="/play" variant="contained">Category 3</Button>
-            </Container>
+                borderBottom: "10px solid #FFFFFF"}}>
+            <Grid container rowSpacing={3}>
+                <Grid item xs={4}>
+                    <Button href={'/OceanGame'} sx={{color: 'white', backgroundColor: 'black'}}>Game1</Button>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button href={'/TowerGame'} sx={{color: 'white', backgroundColor: 'black'}}>Game2</Button>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game3</Button>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game4</Button>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game5</Button>
+                </Grid>
+                <Grid item xs={4}>
+                <Button sx={{color: 'white', backgroundColor: 'black'}}>Game6</Button>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game7</Button>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game8</Button>
+                </Grid>                <Grid item xs={4}>
+                <Button sx={{color: 'white', backgroundColor: 'black'}}>Game9</Button>
+            </Grid>
 
 
+            </Grid>
         </Box>
     );
 }

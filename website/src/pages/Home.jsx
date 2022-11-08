@@ -27,7 +27,7 @@ function Home() {
                     <h1>Welcome to Data4Kids!</h1>
                     <p>Our mission is to teach kids about data visualization through fun games and activities.
                         To get started, explore the different games on our website!</p>
-                    <Button elevation={0} shadow='none' sx={{backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
+                    <Button sx={{ border: "2pt solid #FFFFFF", boxShadow: "none", backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
                             href="/play" variant="contained">Start Playing!</Button>
                 </Box>
             </Box>
