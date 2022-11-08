@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #d048d2;
+  background-color: #E66A85;
 }
 .container {
   background-color: #ffffff;
@@ -97,7 +97,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #d048d2;
+  background-color: #E66A85;
   height: 100%;
   width: 100%;
   top: 0;
