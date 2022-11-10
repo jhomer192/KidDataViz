@@ -19,13 +19,13 @@ function Play() {
                     <Button href={'/OceanGame'} sx={{color: 'white', backgroundColor: 'black'}}>Game1</Button>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button href={'/TowerGame'} sx={{color: 'white', backgroundColor: 'black'}}>Game2</Button>
+                    <Button href={'/TowerGame'} sx={{color: 'white', backgroundColor: 'black'}}>Tower Game</Button>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game3</Button>
+                    <Button href={'/CatchGame'} sx={{color: 'white', backgroundColor: 'black'}}>Catch Game</Button>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game4</Button>
+                    <Button href={'/MathGame'} sx={{color: 'white', backgroundColor: 'black'}}>Math Game</Button>
                 </Grid>
                 <Grid item xs={4}>
                     <Button sx={{color: 'white', backgroundColor: 'black'}}>Game5</Button>
