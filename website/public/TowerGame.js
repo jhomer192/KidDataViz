@@ -116,7 +116,7 @@ canvas.onpointerdown = function () {
 // graph
 //--------------------------------------------------------------------------------------------------------------------------------
 function graph() {
-  var xArray = ["Round 1", "Round 2", "Round 3"];
+  /*var xArray = ["Round 1", "Round 2", "Round 3"];
   var yArray = scores;
 
   var data = [
@@ -131,7 +131,13 @@ function graph() {
   ];
   var layout = { title: "Game Scores" };
 
-  //Plotly.newPlot("myPlot", data, layout);
+  Plotly.newPlot("myPlot", data, layout);*/
+  var data = [["Round 1", scores[0]], ["Round 2", scores[1]], ["Round 3", scores[2]]];
+  chart = anychart.bar();
+  var series = chart.bar(data);
+  chart.isVertical(true);
+  chart.container("myPlot");
+  chart.draw();
 }
 //--------------------------------------------------------------------------------------------------------------------------------
 
@@ -232,7 +238,7 @@ const handleNext = (e) => {
     currentQuestion++;
     renderQuestion();
   } else {
-    alert("You've reached the last question.");
+    alert("Good job! You answered the last question!");
   }
 };
 
@@ -254,7 +260,7 @@ const handleSubmit = (e) => {
   if (correctAns == userAns) {
     msg.innerHTML = `Correct!`;
   } else {
-    msg.innerHTML = `Incorrect. The correct answer was ${correctAns}. ${userAns}`;
+    msg.innerHTML = `Incorrect. The correct answer was ${correctAns}.`;
   }
 
   document.getElementById("0").disabled = true;
