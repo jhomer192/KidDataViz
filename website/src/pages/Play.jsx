@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import GameDisplay from '../componets/GameDisplay';
 
 
 
@@ -19,16 +20,16 @@ function Play() {
            
             <Grid container rowSpacing={3}>
                 <Grid item xs={4}>
-                    <Button href={'/OceanGame'} sx={{color: 'white', backgroundColor: 'black'}}>Ocean Game</Button>
+                <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/> </a>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button href={'/TowerGame'} sx={{color: 'white', backgroundColor: 'black'}}>Tower Game</Button>
+                <a href={'/TowerGame'}> <GameDisplay name={"Tower Game"}/> </a>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button href={'/CatchGame'} sx={{color: 'white', backgroundColor: 'black'}}>Catch Game</Button>
+                <a href={'/CatchGame'}> <GameDisplay name={"Catch Game"}/> </a>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button href={'/MathGame'} sx={{color: 'white', backgroundColor: 'black'}}>Math Game</Button>
+                <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
                 </Grid>
 
                 <Grid item xs={4}>
