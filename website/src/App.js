@@ -9,7 +9,7 @@ import Play from "./pages/Play";
 import About from "./pages/About";
 import Help from "./pages/Help";
 import OceanGame from "./pages/OceanGame/OceanGame";
-import TowerGame from "./pages/TowerGame/TowerGamePage";
+// import TowerGame from "./pages/TowerGame/TowerGamePage";
 
 
 
@@ -25,7 +25,7 @@ function App() {
                   <Route path="about" element={<About />} />
                   <Route path="help" element={<Help />} />
                   <Route path="oceangame" element={<OceanGame />} />
-                  <Route path="towergame" element={<TowerGame />} />
+                  {/* <Route path="towergame" element={<TowerGame />} /> */}
               </Route>
           </Routes>
       </BrowserRouter>

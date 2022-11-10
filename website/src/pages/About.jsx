@@ -1,8 +1,8 @@
 import React from 'react';
-
+import gameSelection from '../componets/gameSelection';
 function About() {
     return (
-        <h1>About Page Text</h1>
+        <gameSelection/>
     );
 }
 
