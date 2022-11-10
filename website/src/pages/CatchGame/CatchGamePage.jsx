@@ -1,11 +1,13 @@
 import React from 'react';
 import './CatchGame.css';
 import useScript from "../useScript"
+import { Box } from '@mui/system';
 
 function CatchGame() {
     useScript('CatchGame.js')
     useScript('https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js')
     return (
+        <Box className="catchgamebox">
             <>
                 <link type="text/css" rel="stylesheet" href="CatchGame.css" />
                 <title>Catch</title>
@@ -55,6 +57,7 @@ function CatchGame() {
                     </table>
                 </div>
             </>
+            </Box>
     )
 }
 

@@ -1,3 +1,6 @@
+Box{
+  
+}
 #myPlot {
   display: flex;
   align-items: center;
@@ -12,5 +15,7 @@
   border: 5px solid black;
   display: block;
   margin: 0 auto 0 auto;
+  margin-top: 7%;
   background-color: lightblue;
 }
+
