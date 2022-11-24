@@ -6,17 +6,11 @@ body{
   font-family: "Comic Sans MS";
 }
 
-h1{
-  text-align: center;
-}
-
-a {
-  color: white;
-  font-family: "Comic Sans MS";
-}
-
 a:hover {
-  color: #8C87CD;
+  color: white;
+}
+a:visited{
+  fill: white;
 }
 
 p{

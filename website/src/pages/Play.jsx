@@ -1,7 +1,6 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import GameDisplay from '../componets/GameDisplay';
 
 
@@ -9,47 +8,45 @@ import GameDisplay from '../componets/GameDisplay';
 function Play() {
     return (
       
-        <Box
+        <Grid container
             sx={{
+                minHeight: "550px",
+                padding: 2,
                 mt: "80pt",
                 mb: "40pt",
-                height:"200pt",
                 backgroundColor: '#8C87CD',
                 borderTop: "10px solid #FFFFFF",
-                borderBottom: "10px solid #FFFFFF"}}>
+                borderBottom: "10px solid #FFFFFF",
+                display: "flex"}}>
            
-            <Grid container rowSpacing={3}>
-                <Grid item xs={4}>
-                <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/> </a>
+            <Grid container sx={{display: "flex", flexWrap: "wrap"}}>
+                <Grid item sx={{width: "400px", p:2}}>
+                <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/>
+                    <Typography>Ocean Game</Typography></a>
+
                 </Grid>
-                <Grid item xs={4}>
-                <a href={'/TowerGame'}> <GameDisplay name={"Tower Game"}/> </a>
+                <Grid item sx={{width: "400px", p:2}}>
+                <a href={'/TowerGame'}> <GameDisplay  name={"Tower Game"}/> </a>
+                    <Typography>Tower Game</Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item sx={{width: "400px", p:2}}>
                 <a href={'/CatchGame'}> <GameDisplay name={"Catch Game"}/> </a>
+                    <Typography>Catch Game</Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item sx={{width: "400px", p:2}}>
                 <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
+                    <Typography>Math Game</Typography>
                 </Grid>
-
-                <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game5</Button>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
+                    <Typography>Math Game</Typography>
                 </Grid>
-                <Grid item xs={4}>
-                <Button sx={{color: 'white', backgroundColor: 'black'}}>Game6</Button>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
+                    <Typography>Math Game</Typography>
                 </Grid>
-                <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game7</Button>
-                </Grid>
-                <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game8</Button>
-                </Grid>                <Grid item xs={4}>
-                <Button sx={{color: 'white', backgroundColor: 'black'}}>Game9</Button>
             </Grid>
-
-
-            </Grid>
-        </Box>
+        </Grid>
     );
 }
 
