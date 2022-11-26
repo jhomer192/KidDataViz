@@ -107,7 +107,7 @@ canvas.onpointerdown = function () {
   } else if (mode === "gameOver" && round === 4) {
     canvas.remove();
     graph();
-    renderQuestion();
+    //renderQuestion();
   } else {
     if (mode === "bounce") mode = "fall";
   }
@@ -133,9 +133,8 @@ function graph() {
 
   Plotly.newPlot("myPlot", data, layout);*/
   var data = [["Round 1", scores[0]], ["Round 2", scores[1]], ["Round 3", scores[2]]];
-  chart = anychart.bar();
-  var series = chart.bar(data);
-  chart.isVertical(true);
+  chart = anychart.line();
+  var series = chart.line(data);
   chart.container("myPlot");
   chart.draw();
 }
