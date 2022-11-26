@@ -33,7 +33,7 @@ document.onkeydown = function () {
 function moveright(elem) {
 
   function frame() {
-    if (elem.getBoundingClientRect().right <= 430) {
+    if (elem.getBoundingClientRect().right <= 430000) {
       left = left + 20
       elem.style.left = left + 'px'
     }

@@ -1,24 +1,48 @@
 body {
-  background-color: #a79390;
+    background-color: #E66A85;
+}
+
+p {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    text-align: center;
+}
+
+.center {
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rules {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    text-align: center;
 }
 
 .path {
-	position: relative;
-	overflow: hidden;
-	width: 400px;
-	height: 400px;
-    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1px;
-	border: 10px solid #000;
+    border: 10px solid #000;
 }
 
 .box {
-	position: relative;
-	overflow: hidden;
-	width: 400px;
-	height: 80px;
-    margin-left: 20px;
-	border: 10px solid #000;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #000;
 }
 
 table {
@@ -38,7 +62,7 @@ h1 {
 h2 {
     font-size: 16px;
     font-family: Verdana;
-    text-align: left;  
+    text-align: left;
 }
 
 td {
@@ -46,34 +70,35 @@ td {
     width: 10px;
     text-align: center;
 }
+
 .block {
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	margin: 0px;
-	text-align: center;
-	color: #fff;
-	font-size: 10px;
-	white-space: nowrap;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    white-space: nowrap;
 }
 
 .brick {
     position: absolute;
-    top: 370px;
-	background-color: turquoise;
-	width: 60px;
-	height: 10px;
-	margin: 0px;
-	text-align: center;
-	color: #fff;
-	font-size: 10px;
-	white-space: nowrap; 
+    background-color: turquoise;
+    width: 60px;
+    height: 10px;
+    margin: 0px;
+    top: 360px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    white-space: nowrap;
 }
 
 button {
     height: 60px;
     width: 60px;
-    font-size: 15px; 
+    font-size: 15px;
     background-color: lightgreen;
 }
 
@@ -89,16 +114,22 @@ button {
     color: red;
 }
 
+/* #rules {
+    font-size: 20px;
+    text-align: center;
+} */
+
 #gameover {
     margin: 50;
     font-size: 50px;
+    text-align: center;
 }
 
 #chart {
-    width: 390px;
-    height: 390px;
-    margin-left: 5;
-    margin-right: 5;
+    width: 380px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 5;
     margin-top: -45;
     padding: 0;

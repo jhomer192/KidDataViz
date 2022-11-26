@@ -1,5 +1,11 @@
 body {
-  background-color: #a79390;
+  background-color: #E66A85;
+}
+
+.center {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .path {
@@ -7,7 +13,8 @@ body {
 	overflow: hidden;
 	width: 400px;
 	height: 400px;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1px;
 	border: 10px solid #000;
 }
@@ -17,7 +24,8 @@ body {
 	overflow: hidden;
 	width: 400px;
 	height: 80px;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
 	border: 10px solid #000;
 }
 
