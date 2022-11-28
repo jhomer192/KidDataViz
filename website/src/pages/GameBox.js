@@ -1,4 +1,3 @@
-
 import {BoxProps} from "@mui/material/Box";
 import {Box} from "@mui/system";
 import React from "react";
@@ -8,15 +7,14 @@ const GameBox = (props: BoxProps) => {
     return (
         <Box
             sx={{
-                bgcolor: 'black',
-                color: 'white',
-                border: '2px solid',
-                borderColor: 'white',
-                p: 1,
-                m: 1,
-                borderRadius: 2,
-                fontSize: '0.875rem',
-                fontWeight: '700',
+                minHeight: "550px",
+                mt: '80pt',
+                mb: '80pt',
+                p: 2,
+                backgroundColor: '#8C87CD',
+                height: '100%',
+                borderTop: "10px solid #FFFFFF",
+                borderBottom: "10px solid #FFFFFF",
                 ...sx,
             }}
             {...other}

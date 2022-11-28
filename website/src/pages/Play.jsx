@@ -9,45 +9,70 @@ import { Typography } from '@mui/material';
 
 function Play() {
     return (
-      
-        <Box
+
+
+        <Grid container
             sx={{
                 mt: "80pt",
                 mb: "40pt",
                 height:"200pt",
                 backgroundColor: '#8C87CD',
                 borderTop: "10px solid #FFFFFF",
-                borderBottom: "10px solid #FFFFFF"}}>
-           
-            <Grid container rowSpacing={3}>
-                <Grid item xs={4}>
-                <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/> </a>
-                </Grid>
-                <Grid item xs={4}>
-                <a href={'/TowerGame'}> <GameDisplay name={"Tower Game"}/> </a>
-                </Grid>
-                <Grid item xs={4}>
-                <a href={'/CatchGame'}> <GameDisplay name={"Catch Game"}/> </a>
-                </Grid>
-                <Grid item xs={4}>
-                <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
-                </Grid>
+                borderBottom: "10px solid #FFFFFF",
+                display: "flex"}}>
 
-                <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game5</Button>
-                </Grid>
-                <Grid item xs={4}>
-                <Button sx={{color: 'white', backgroundColor: 'black'}}>Game6</Button>
-                </Grid>
-                <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game7</Button>
-                </Grid>
+            <Grid container sx={{display: "flex", flexWrap: "wrap", padding: 2, mb:2,
+                backgroundColor: '#7CB65C',
+                border: "10px solid #FFFFFF",
+                borderRadius: "10px"}}>
+                <Typography sx={{p:1, fontSize: '48pt', fontFamily: 'Comic Sans MS'}}>Grades 1-2</Typography>
                 <Grid item sx={{width: "400px", p:2}}>
                     <a href={'/CakeGame'}> <GameDisplay name={"Cake Game"}/> </a>
                     <Typography>Cake Game</Typography>
                 </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/></a>
+                    <Typography>Ocean Game</Typography>
+                </Grid>
+
             </Grid>
-        </Box>
+
+
+            <Grid container sx={{display: "flex", flexWrap: "wrap", padding: 2, mb:2,
+                backgroundColor: '#7CB65C',
+                border: "10px solid #FFFFFF",
+                borderRadius: "10px"}}>
+                <Typography sx={{p:1, fontSize: '48pt', fontFamily: 'Comic Sans MS'}}>Grades 3-4</Typography>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/TowerGame'}> <GameDisplay  name={"Tower Game"}/> </a>
+                    <Typography>Tower Game</Typography>
+                </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/CatchGame'}> <GameDisplay name={"Catch Game"}/> </a>
+                    <Typography>Catch Game</Typography>
+                </Grid>
+
+            </Grid>
+
+
+            <Grid container sx={{display: "flex", flexWrap: "wrap", padding: 2, mb:2,
+                backgroundColor: '#7CB65C',
+                border: "10px solid #FFFFFF",
+                borderRadius: "10px"}}>
+                <Typography sx={{p:1, fontSize: '48pt', fontFamily: 'Comic Sans MS'}}>Grades 5+</Typography>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
+                    <Typography>Math Game</Typography>
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+
+
+
+
+
     );
 }
 

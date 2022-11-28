@@ -1,6 +1,5 @@
 import React from 'react';
 import './MathGame.css';
-import GameBox from '../GameBox';
 import useScript from "../useScript"
 
 function MathGame() {
