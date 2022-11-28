@@ -44,6 +44,7 @@ body {
   cursor: pointer;
   color: #23234c;
   padding: 0.6em 2em;
+  width: fit-content;
 }
 #error-msg {
   text-align: center;
@@ -112,6 +113,7 @@ body {
   cursor: pointer;
   padding: 0.8em 1.8em;
   border-radius: 0.3em;
+  width: fit-content;
 }
 html, body, #container {
   width: 100%;
@@ -129,6 +131,7 @@ html, body, #container {
   cursor: pointer;
   padding: 0.8em 1.8em;
   border-radius: 0.3em;
+  width: fit-content;
 }
 #result {
   margin-bottom: 1em;

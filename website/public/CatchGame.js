@@ -1,4 +1,6 @@
 //Starting Point
+var colors = ['pink', 'blue', 'purple', 'green', 'grey', 'yellow', 'orange']
+
 var block = document.getElementById('block'),
   brick = document.getElementById('brick'),
   path = document.getElementById('path'),
@@ -9,12 +11,11 @@ var blockRect = block.getBoundingClientRect(),
 var startbtn = document.getElementById('start'),
   resetbtn = document.getElementById('reset'),
   databtn = document.getElementById('data')
-var left = 10;
-brick.style.left = 10;
-block.style.top = 10;
-block.style.backgroundColor = "purple";
-gameover.style.top = 150;
-gameover.style.left = 150
+var left = 140;
+brick.style.left = "140px";
+block.style.top = "5px";
+block.style.left = Math.floor((Math.random() * 365) + 5) + "px";
+block.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
 //Keys
 document.onkeydown = function () {
@@ -32,7 +33,7 @@ document.onkeydown = function () {
 function moveright(elem) {
 
   function frame() {
-    if (elem.getBoundingClientRect().right <= 430) {
+    if (elem.getBoundingClientRect().right <= (path.getBoundingClientRect().x + 380)) {
       left = left + 20
       elem.style.left = left + 'px'
     }
@@ -44,7 +45,7 @@ function moveright(elem) {
 function moveleft(elem) {
 
   function frame() {
-    if (elem.getBoundingClientRect().left >= 30) {
+    if (elem.getBoundingClientRect().left >= (path.getBoundingClientRect().x + 20)) {
       left = left - 20
       elem.style.left = left + 'px'
     }
@@ -53,7 +54,7 @@ function moveleft(elem) {
   var id = setInterval(frame, 0)
 }
 
-var colors = ['pink', 'blue', 'purple', 'green', 'grey', 'yellow', 'orange']
+// dictionary to keep track of colors caught
 var dataMap = {}
 
 startbtn.onclick = function movedown() {
@@ -63,7 +64,7 @@ startbtn.onclick = function movedown() {
     block.style.top = top + 'px'
     var blockRect = block.getBoundingClientRect(),
       brickRect = brick.getBoundingClientRect()
-    if (block.style.top === '375px' && blockRect.right > brickRect.left && blockRect.left < brickRect.right) {
+    if (block.style.top === '355px' && blockRect.right > brickRect.left && blockRect.left < brickRect.right) {
       clearInterval(id)
       // count number of each block caught
       if (dataMap[block.style.backgroundColor]) {
@@ -98,6 +99,9 @@ resetbtn.onclick = function reset() {
   document.getElementById("score").innerHTML = score;
   document.getElementById("chart").innerHTML = "";
   dataMap = {}
+  block.style.top = "5px";
+  block.style.left = Math.floor((Math.random() * 365) + 5) + "px";
+  block.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 }
 
 databtn.onclick = function getData() {
@@ -120,6 +124,8 @@ databtn.onclick = function getData() {
     var chart = anychart.bar();
     // add data
     chart.data(data);
+    chart.yScale().ticks().allowFractional(false);
+    chart.yScale().minimum(0);
     // set the chart title
     chart.title("The number of blocks caught per color");
     // draw

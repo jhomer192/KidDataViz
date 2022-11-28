@@ -41,13 +41,10 @@ function Play() {
                 <Grid item xs={4}>
                     <Button sx={{color: 'white', backgroundColor: 'black'}}>Game7</Button>
                 </Grid>
-                <Grid item xs={4}>
-                    <Button sx={{color: 'white', backgroundColor: 'black'}}>Game8</Button>
-                </Grid>                <Grid item xs={4}>
-                <Button sx={{color: 'white', backgroundColor: 'black'}}>Game9</Button>
-            </Grid>
-
-
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/CakeGame'}> <GameDisplay name={"Cake Game"}/> </a>
+                    <Typography>Cake Game</Typography>
+                </Grid>
             </Grid>
         </Box>
     );
