@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Game Hard</title>
+    <!-- Data Viz Chart -->
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:700"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="MathGameHard.css" />
+  </head>
+  <body style="text-align:center;">
+    <div class="container">
+      <h3>Fill in the blank with the correct number or operator.</h3>
+      <label id = "qLeft">
+        questions left here:
+      </label>
+      <div id="question"></div>
+      <button id="submit-btn">Submit</button>
+      <p id="error-msg">Error</p>
+    </div>
+    <div id = "container" class="controls-container">
+      <p id="result"></p>
+      <button id="start-btn">Start Game</button>
+      <button id="dataviz-btn">Show Data Viz</button>
+    </div>
+    <!-- Script -->
+    <script src="MathGameHard.js"></script>
+  </body>
+</html>
