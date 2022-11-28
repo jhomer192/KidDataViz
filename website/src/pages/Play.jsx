@@ -45,6 +45,10 @@ function Play() {
                     <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
                     <Typography>Math Game</Typography>
                 </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/CakeGame'}> <GameDisplay name={"Cake Game"}/> </a>
+                    <Typography>Cake Game</Typography>
+                </Grid>
             </Grid>
         </Grid>
     );
