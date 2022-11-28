@@ -1,50 +1,69 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import './OceanGame.css';
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import GameBox from "../GameBox";
+import Grid from "@mui/material/Grid";
+import GameBox from "../GameBox"
+import Slider from '@mui/material/Slider';
 
 
 
 function OceanGame() {
     return (
-        <Box
-            sx={{
-                mt: "80pt",
-                mb: "40pt",
-                height: "400px",
-                backgroundColor: '#8C87CD',
-                borderTop: "10px solid #FFFFFF",
-                borderBottom: "10px solid #FFFFFF",
-                display: 'flex',
-                alignContent: 'center'}}>
-            <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(1, 10fr)' }}>
                 <GameBox>
-                    <Typography sx={{ textTransform: 'none',fontSize: '16pt', m:2, fontFamily: 'Comic Sans MS'}} >
+                    <Typography sx={{ textTransform: 'none',fontSize: '32pt', m:2, fontFamily: 'Comic Sans MS'}} >
                         Ocean Game!
                     </Typography>
+
+                    <Grid container
+                          sx={{
+                              minHeight: "550px",
+                              padding: 2,
+                              display: "flex", flexWrap: "wrap",}}>
+                        <Grid container sx={{display: "flex", flexWrap: "wrap", padding: 2, mb:2,
+                            backgroundColor: '#7CB65C',
+                            border: "10px solid #FFFFFF",
+                            borderRadius: "10px"}}>
+                            <Typography sx={{textTransform: 'none',fontSize: '24pt', m:2, fontFamily: 'Comic Sans MS'}} >
+                                Contents of the Ocean
+                            </Typography>
+
+                            <Slider
+                                size="large"
+                                defaultValue={20}
+                                aria-label="Small"
+                                valueLabelDisplay="auto"
+                            />
+                            <Slider
+                                size="large"
+                                defaultValue={20}
+                                aria-label="Small"
+                                valueLabelDisplay="auto"
+                            />
+                            <Slider
+                                size="large"
+                                defaultValue={20}
+                                aria-label="Small"
+                                valueLabelDisplay="auto"
+                            />
+                            <Slider
+                                size="large"
+                                defaultValue={20}
+                                aria-label="Small"
+                                valueLabelDisplay="auto"
+                            />
+
+                        </Grid>
+
+                        <Grid container sx={{display: "flex", flexWrap: "wrap", padding: 2, mb:2,
+                            backgroundColor: '#7CB65C',
+                            border: "10px solid #FFFFFF",
+                            borderRadius: "10px"}}>
+
+                        </Grid>
+
+                    </Grid>
+
                 </GameBox>
-                <GameBox>
-                    <Button sx={{textTransform: 'none', fontSize: '16pt',
-                        m:2, fontFamily: 'Comic Sans MS', color: 'white',
-                        border: "2pt solid #FFFFFF", background: '#8C87CD'}}>
-                        New
-                    </Button>
-                    <Button sx={{textTransform: 'none', fontSize: '16pt',
-                        m:2, fontFamily: 'Comic Sans MS', color: 'white',
-                        border: "2pt solid #FFFFFF", background: '#8C87CD'}}>
-                        Save
-                    </Button>
-                    <Button sx={{textTransform: 'none', fontSize: '16pt',
-                        m:2, fontFamily: 'Comic Sans MS', color: 'white',
-                        border: "2pt solid #FFFFFF", background: '#8C87CD'}}>
-                        Help
-                    </Button>
-                </GameBox>
-                <GameBox></GameBox>
-            </Box>
-        </Box>
     );
 }
 
