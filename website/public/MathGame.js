@@ -23,7 +23,7 @@ dataVizBtn.classList.add("hide");
 const randomValue = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 //random value for number of questions
-let numQuestions = randomValue(5, 6);
+let numQuestions = randomValue(10, 15);
 
 const questionGenerator = () => {
   if(numQuestions == 1) {
