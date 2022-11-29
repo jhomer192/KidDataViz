@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 function Home() {
     return (
@@ -24,9 +25,9 @@ function Home() {
                 borderRadius: "10px"}}>
                 <Box sx={{
                     m: 2 ,textAlign: 'center'}}>
-                    <h1>Welcome to Data4Kids!</h1>
-                    <p>Our mission is to teach kids about data visualization through fun games and activities.
-                        To get started, explore the different games on our website!</p>
+                    <Typography sx={{fontSize: '32pt', fontFamily: "Comic Sans MS"}}>Welcome to Data4Kids!</Typography>
+                    <Typography sx={{fontSize: '16pt', fontFamily: "Comic Sans MS"}}>Our mission is to teach kids about data visualization through fun games and activities.
+                        To get started, explore the different games on our website!</Typography>
                     <Button sx={{ border: "2pt solid #FFFFFF", boxShadow: "none", backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
                             href="/play" variant="contained">Start Playing!</Button>
                 </Box>
