@@ -30,14 +30,14 @@ function unityShowBanner(msg, type) {
 }
 
 var buildUrl = "Build";
-var loaderUrl = buildUrl + "/Cake Game Unity WebGL.loader.js";
+var loaderUrl = buildUrl + "/CakeGameDraft3.loader.js";
 var config = {
-  dataUrl: buildUrl + "/Cake Game Unity WebGL.data",
-  frameworkUrl: buildUrl + "/Cake Game Unity WebGL.framework.js",
-  codeUrl: buildUrl + "/Cake Game Unity WebGL.wasm",
+  dataUrl: buildUrl + "/CakeGameDraft3.data",
+  frameworkUrl: buildUrl + "/CakeGameDraft3.framework.js",
+  codeUrl: buildUrl + "/CakeGameDraft3.wasm",
   streamingAssetsUrl: "StreamingAssets",
   companyName: "DefaultCompany",
-  productName: "Cake Game",
+  productName: "Lego Game",
   productVersion: "1.0",
   showBanner: unityShowBanner,
 };

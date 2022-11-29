@@ -1,11 +1,10 @@
 import React from 'react';
-import './CakeGamePage.css'
+import './CakeGamePage.css';
 import useScript from "../useScript"
 
 function CakeGame() {
     useScript('CakeGame.js')
     return (
-
         <>
           <meta charSet="utf-8" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,7 +23,7 @@ function CakeGame() {
             <div id="unity-footer">
               <div id="unity-webgl-logo" />
               <div id="unity-fullscreen-button" />
-              <div id="unity-build-title">Cake Game</div>
+              <div id="unity-build-title"></div>
             </div>
           </div>
         </>
