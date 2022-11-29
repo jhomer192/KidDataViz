@@ -225,7 +225,7 @@ dataVizBtn.addEventListener("click", () => {
       ]};
 
     // create the chart
-    var chart = anychart.column();
+    var chart = anychart.bar();
 
     // add the data
     chart.data(data);
