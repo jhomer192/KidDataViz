@@ -34,6 +34,10 @@ function Play() {
                     <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/></a>
                     <Typography>Ocean Game</Typography>
                 </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/LegoGame'}> <GameDisplay name={"Lego Game"}/></a>
+                    <Typography>Lego Game</Typography>
+                </Grid>
 
             </Grid>
 
@@ -44,12 +48,12 @@ function Play() {
                 borderRadius: "10px"}}>
                 <Typography sx={{p:1, fontSize: '48pt', fontFamily: 'Comic Sans MS'}}>Grades 3-4</Typography>
                 <Grid item sx={{width: "400px", p:2}}>
-                    <a href={'/TowerGame'}> <GameDisplay  name={"Tower Game"}/> </a>
-                    <Typography>Tower Game</Typography>
-                </Grid>
-                <Grid item sx={{width: "400px", p:2}}>
                     <a href={'/CatchGame'}> <GameDisplay name={"Catch Game"}/> </a>
                     <Typography>Catch Game</Typography>
+                </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
+                    <Typography>Math Game</Typography>
                 </Grid>
 
             </Grid>
@@ -61,8 +65,12 @@ function Play() {
                 borderRadius: "10px"}}>
                 <Typography sx={{p:1, fontSize: '48pt', fontFamily: 'Comic Sans MS'}}>Grades 5+</Typography>
                 <Grid item sx={{width: "400px", p:2}}>
-                    <a href={'/MathGame'}> <GameDisplay name={"Math Game"}/> </a>
-                    <Typography>Math Game</Typography>
+                    <a href={'/TowerGame'}> <GameDisplay  name={"Tower Game"}/> </a>
+                    <Typography>Tower Game</Typography>
+                </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/MathGameHard'}> <GameDisplay name={"Math Game Hard"}/> </a>
+                    <Typography>Math Game Hard</Typography>
                 </Grid>
             </Grid>
 

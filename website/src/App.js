@@ -12,7 +12,9 @@ import OceanGame from "./pages/OceanGame/OceanGame";
 import TowerGame from "./pages/TowerGame/TowerGamePage";
 import CatchGame from "./pages/CatchGame/CatchGamePage";
 import MathGame from "./pages/MathGame/MathGamePage";
+import MathGameHard from "./pages/MathGameHard/MathGameHardPage";
 import CakeGame from "./pages/CakeGame/CakeGamePage";
+import LegoGame from "./pages/LegoGame/LegoGamePage";
 
 
 function App() {
@@ -30,7 +32,9 @@ function App() {
                   <Route path="towergame" element={<TowerGame />} />
                   <Route path="catchgame" element={<CatchGame />} />
                   <Route path="mathgame" element={<MathGame />} />
+                  <Route path="mathgamehard" element={<MathGameHard />} />
                   <Route path="cakegame" element={<CakeGame />} />
+                  <Route path="legogame" element={<LegoGame />} />
               </Route>
           </Routes>
       </BrowserRouter>
