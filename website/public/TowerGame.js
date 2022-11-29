@@ -1,5 +1,6 @@
 let canvas = document.getElementById("myCanvas");
 let context = canvas.getContext("2d");
+let instructions = document.getElementById("instructions");
 let scrollCounter, cameraY, current, mode, xSpeed;
 let ySpeed = 10;
 let height = 50;
@@ -30,7 +31,7 @@ function gameOver() {
   } else if (round === 2) {
     context.fillText(`Round 2 over. Click to play Round 3.`, 125, 50);
   } else if (round === 3) {
-    context.fillText(`Game over. Click to answer some questions.`, 100, 50);
+    context.fillText(`Game over. Click to view data visualization.`, 100, 50);
   }
 
   round++;
@@ -77,15 +78,8 @@ function animate() {
 function start() {
   mode = "gameOver";
   color = "black";
-  context.font = "bold 15px Comic Sans MS";
-  context.fillText(`How to play`, 350, 300);
-  context.fillText(
-    `Click the screen to drop the block. Stack the tower as high as you can!`,
-    130,
-    325
-  );
   context.font = "bold 30px Comic Sans MS";
-  context.fillText(`Click to start!`, 300, 400);
+  context.fillText(`Click to start!`, 300, 300);
 }
 
 function restart() {
@@ -106,6 +100,7 @@ canvas.onpointerdown = function () {
     restart();
   } else if (mode === "gameOver" && round === 4) {
     canvas.remove();
+    instructions.remove();
     graph();
     //renderQuestion();
   } else {
@@ -133,8 +128,8 @@ function graph() {
 
   Plotly.newPlot("myPlot", data, layout);*/
   var data = [["Round 1", scores[0]], ["Round 2", scores[1]], ["Round 3", scores[2]]];
-  chart = anychart.line();
-  var series = chart.line(data);
+  chart = anychart.bar();
+  var series = chart.bar(data);
   chart.container("myPlot");
   chart.draw();
 }

@@ -12,6 +12,10 @@ function TowerGame() {
                 <link rel="stylesheet" href="TowerGame.css" />
                 <div id="myPlot" />
                 <div id="questions" />
+                <div id="instructions">
+                    How to play
+                    <br></br>
+                    Click the screen to drop the block. Stack the tower as high as you can!</div>                
                 <canvas id="myCanvas" width={800} height={600}/>
             </>
         </GameBox>
