@@ -1,4 +1,4 @@
-//Starting Point
+// Starting Point
 var colors = ['pink', 'blue', 'purple', 'green', 'grey', 'yellow', 'orange']
 
 var block = document.getElementById('block'),
@@ -17,7 +17,7 @@ block.style.top = "5px";
 block.style.left = Math.floor((Math.random() * 365) + 5) + "px";
 block.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
-//Keys
+// Keys
 document.onkeydown = function () {
   switch (window.event.keyCode) {
     case 37:
@@ -29,7 +29,7 @@ document.onkeydown = function () {
   }
 };
 
-//Movement
+// Movement left and right keys
 function moveright(elem) {
 
   function frame() {
@@ -84,7 +84,7 @@ startbtn.onclick = function movedown() {
       document.getElementById("gameover").innerHTML = "GAME OVER";
     }
   }
-  var id = setInterval(frame, 2)
+  var id = setInterval(frame, 4)  // control speed of blocks falling
 }
 
 var score = 0
@@ -108,33 +108,81 @@ databtn.onclick = function getData() {
   document.getElementById("gameover").innerHTML = "";
   anychart.onDocumentReady(function () {
     // set the data
-    var data = {
-      header: ["Name", "Blocks caught"],
-      rows: [
-        ["Pink", dataMap["pink"]],
-        ["Blue", dataMap["blue"]],
-        ["Purple", dataMap["purple"]],
-        ["Green", dataMap["green"]],
-        ["Grey", dataMap["grey"]],
-        ["Yellow", dataMap["yellow"]],
-        ["Orange", dataMap["orange"]]
-      ]
-    };
+    var data = [
+      {
+        x: "Pink", value: dataMap["pink"],
+        normal: {
+          fill: "pink",
+          stroke: null,
+          label: { enabled: false }
+        },
+      },
+      {
+        x: "Blue", value: dataMap["blue"],
+        normal: {
+          fill: "blue",
+          stroke: null,
+          label: { enabled: false }
+        },
+      },
+      {
+        x: "Purple", value: dataMap["purple"],
+        normal: {
+          fill: "purple",
+          stroke: null,
+          label: { enabled: false }
+        },
+      },
+      {
+        x: "Green", value: dataMap["green"],
+        normal: {
+          fill: "green",
+          stroke: null,
+          label: { enabled: false }
+        },
+      },
+      {
+        x: "Grey", value: dataMap["grey"],
+        normal: {
+          fill: "grey",
+          stroke: null,
+          label: { enabled: false }
+        },
+      },
+      {
+        x: "Yellow", value: dataMap["yellow"],
+        normal: {
+          fill: "yellow",
+          stroke: null,
+          label: { enabled: false }
+        },
+      },
+      {
+        x: "Orange", value: dataMap["orange"],
+        normal: {
+          fill: "orange",
+          stroke: null,
+          label: { enabled: false }
+        },
+      }
+    ];
     // create the chart
     var chart = anychart.bar();
+    var series = chart.bar(data);
     // add data
-    chart.data(data);
     chart.yScale().ticks().allowFractional(false);
     chart.yScale().minimum(0);
-    // set the chart title
-    chart.title("The number of blocks caught per color");
+    // set the chart title and axis titles
+    chart.title("The Number of Blocks Caught per Color");
+    chart.xAxis().title("Color")
+    chart.yAxis().title("Number of Blocks")
     // draw
     chart.container("chart");
     chart.draw();
   });
 }
 
-//Swipe Functionality
+// Swipe Functionality
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 
