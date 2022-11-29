@@ -222,14 +222,14 @@ dataVizBtn.addEventListener("click", () => {
         // ["Subtraction Incorrect", subincorrect]
         ["Correct", correct],
         ["Incorrect", incorrect]
-      ]};
+      ]
+    };
 
     // create the chart
     var chart = anychart.bar();
 
     // add the data
     chart.data(data);
-
     // set the chart title
     chart.title("Data Viz");
 
@@ -239,6 +239,8 @@ dataVizBtn.addEventListener("click", () => {
     var yAxis = chart.yAxis();
     yAxis.title("Score");
 
+    chart.yScale().ticks().allowFractional(false);
+    chart.yScale().minimum(0);
     // draw
     chart.container("container");
     chart.draw();

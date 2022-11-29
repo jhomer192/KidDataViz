@@ -248,6 +248,9 @@ dataVizBtn.addEventListener("click", () => {
     var yAxis = chart.yAxis();
     yAxis.title("Score");
 
+    chart.yScale().ticks().allowFractional(false);
+    chart.yScale().minimum(0);
+
     // draw
     chart.container("container");
     chart.draw();
