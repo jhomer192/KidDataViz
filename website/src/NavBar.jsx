@@ -14,7 +14,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import './NavBar.css'
+import Tooltip from '@mui/material/Tooltip';
+import {ReactComponent as Logo} from './kdv_logo.svg';
+import './NavBar.css';
 
 
 export default function NavBar(props) {
@@ -76,13 +78,12 @@ export default function NavBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        variant="h4"
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', color: 'white', fontFamily: 'Comic Sans MS'} }}
-                    >
-                        Logo
-                    </Typography>
+                    <Tooltip title="Home">
+                        <IconButton href="/Home" sx={{stroke: "white", width: '80px', height: '50px', p: 0, m:2}}>
+                            <Logo></Logo>
+                        </IconButton>
+                    </Tooltip>
+
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <Button href="/Home" sx={{width: '90px', textTransform: 'none', fontSize: '18pt',
                                     m:1, fontFamily: 'Comic Sans MS', color: 'white',

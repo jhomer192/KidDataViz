@@ -3,6 +3,11 @@
 
  */
 
-.Typography {
+Typography {
     font-family: "Comic Sans MS"
+}
+
+img{
+    width: 10px;
+    height: 10px;
 }

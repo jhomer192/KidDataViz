@@ -10,7 +10,7 @@ function Home() {
                 mt: '80pt',
                 mb: 2,
                 backgroundColor: '#8C87CD',
-                height: '100%',
+                height: '600px',
                 borderTop: "10px solid #FFFFFF",
                 borderBottom: "10px solid #FFFFFF",
                 display: 'flex',
@@ -25,7 +25,7 @@ function Home() {
                 borderRadius: "10px"}}>
                 <Box sx={{
                     m: 2 ,textAlign: 'center'}}>
-                    <Typography sx={{fontSize: '32pt', fontFamily: "Comic Sans MS"}}>Welcome to Data4Kids!</Typography>
+                    <Typography sx={{fontSize: '32pt', fontFamily: "Comic Sans MS"}}>Welcome to KidDataViz!</Typography>
                     <Typography sx={{fontSize: '16pt', fontFamily: "Comic Sans MS"}}>Our mission is to teach kids about data visualization through fun games and activities.
                         To get started, explore the different games on our website!</Typography>
                     <Button sx={{ border: "2pt solid #FFFFFF", boxShadow: "none", backgroundColor: "#EF7F4F", fontSize: '16pt', fontFamily: "Comic Sans MS", m: 2}}
