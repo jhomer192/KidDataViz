@@ -1,44 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './OceanGame.css';
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import GameBox from "../GameBox"
 import Slider from '@mui/material/Slider';
+import kelpPic from './OceanGamePictures/kelp.png'
+import coralPic from './OceanGamePictures/coral.png'
+import bluePic from './OceanGamePictures/bluefish.png'
+import redPic from './OceanGamePictures/redfish.png'
 
-var curBlueFish = 20;
-var curRedFish = 20;
-var curKelp = 20;
-var curCoral = 20;
-var init = false;
+
+
 function OceanGame() {
-    function firstOpen() {
-        if (!init) {
-            //make 20 of everything
-            init = true;
-        }
-    }
-    firstOpen();
-    function handleChange(e) {
-        switch (e.target.id) {
-            case "blueSlide":
-                if (curBlueFish < e.target.value)
-                {
-                    //make targ-curFish
-                }
-                else
-                {
-                    //make cur-targ
-                }
-                curBlueFish = e.target.value;
-                break;
-            case "redSlide":
-                break;
-            case "kelpSlide":
-                break;
-            case "coralSlide":
-                break;
-        }
-    }
+    const [curBlueFish, setCurBlueFish] = useState(5);
+    const [curRedFish, setCurRedFish] = useState(5);
+    const [curKelp, setCurKelp] = useState(5);
+    const [curCoral, setCurCoral] = useState(5);
+    var AddedBlueFish = Array.from(Array(curBlueFish).keys()).map((d) =>  <img src={bluePic} alt={bluePic}/>);
+    var AddedRedFish =   Array.from(Array(curRedFish).keys()).map((d) =>  <img src={redPic} alt={redPic}/>);
+    var AddedKelp =  Array.from(Array(curKelp).keys()).map((d) =>  <img src={kelpPic} alt={kelpPic}/>);
+    var AddedCoral = Array.from(Array(curCoral).keys()).map((d) =>  <img src={coralPic} alt={coralPic}/>);
+
 
     return (
         <GameBox>
@@ -46,61 +28,63 @@ function OceanGame() {
                 Ocean Game!
             </Typography>
 
+
             <Grid container
                 sx={{
                     minHeight: "550px",
                     padding: 2,
                     display: "flex", flexWrap: "wrap",
                 }}>
+                 <Typography sx={{ textTransform: 'none', fontSize: '24pt', m: 2, fontFamily: 'Comic Sans MS' }} >
+                        Contents of the Ocean 
+                    </Typography>
                 <Grid container sx={{
                     display: "flex", flexWrap: "wrap", padding: 2, mb: 2,
                     backgroundColor: '#7CB65C',
                     border: "10px solid #FFFFFF",
                     borderRadius: "10px"
                 }}>
-                    <Typography sx={{ textTransform: 'none', fontSize: '24pt', m: 2, fontFamily: 'Comic Sans MS' }} >
-                        Contents of the Ocean
-                    </Typography>
-                    <br/>
+                
+                    
                     <Typography>Blue Fish</Typography>
                     <Slider
-                     id={"blueSlide"}
                         label="Blue Fish"
                         size="large"
-                        defaultValue={20}
+                        defaultValue={5}
+                        max ={39}
                         aria-label="Small"
                         valueLabelDisplay="auto"
-                        onChange={handleChange}
+                        onChange={(e) => {setCurBlueFish(e.target.value)}}
                        
                     />
                     <Typography>Red Fish</Typography>
                     <Slider
-                    id={"redSlide"}
                         size="large"
-                        defaultValue={20}
+                        defaultValue={5}
+                        max ={39}
                         aria-label="Small"
                         valueLabelDisplay="auto"
-                        onChange={handleChange}
-                        
-                    />
-                    <Typography>Kelp</Typography>
-                    <Slider
-                    id={"kelpSlide"}
-                        size="large"
-                        defaultValue={20}
-                        aria-label="Small"
-                        valueLabelDisplay="auto"
-                        onChange={handleChange}
+                        onChange={(e) => {setCurRedFish(e.target.value)}}
                         
                     />
                     <Typography>Coral</Typography>
                     <Slider
-                    id={"coralSlide"}
                         size="large"
-                        defaultValue={20}
+                        max ={39}
+                        defaultValue={5}
                         aria-label="Small"
                         valueLabelDisplay="auto"
-                        onChange={handleChange}
+                        onChange={(e) => {setCurCoral(e.target.value)}}
+                        
+                    />
+                    <Typography>Kelp</Typography>
+                    <Slider
+                        size="large"
+                        max ={39}
+                        defaultValue={5}
+                        aria-label="Small"
+                        valueLabelDisplay="auto"
+                        onChange={(e) => {setCurKelp(e.target.value)}}
                         
                     />
 
@@ -113,9 +97,26 @@ function OceanGame() {
                     borderRadius: "10px"
                 }}>
 
+<Grid container sx={{display: "flex", flexWrap: "wrap", padding: 2, mb:2,
+                backgroundColor: '#006994',
+                border: "10px solid #FFFFFF",
+                borderRadius: "10px"}}>
+                <Grid item sx={{width: "2000px", p:1}}>
+                {AddedBlueFish}
                 </Grid>
-
-            </Grid>
+                <Grid item sx={{width: "2000px", p:1}}>
+                {AddedRedFish}
+                </Grid>
+                <Grid item sx={{width: "2000px", p:1}}>
+                {AddedCoral}
+                </Grid>
+                <Grid item sx={{width: "2000px", p:1}}>
+                {AddedKelp}
+                </Grid>
+                </Grid>
+                </Grid>
+</Grid>
+           
 
         </GameBox>
     );
