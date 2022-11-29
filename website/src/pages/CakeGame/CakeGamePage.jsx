@@ -1,4 +1,5 @@
 import React from 'react';
+import './CakeGamePage.css';
 import useScript from "../useScript"
 
 function CakeGame() {

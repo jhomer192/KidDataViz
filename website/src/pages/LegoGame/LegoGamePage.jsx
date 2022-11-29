@@ -1,4 +1,5 @@
 import React from 'react';
+import './LegoGamePage.css';
 import useScript from "../useScript"
 
 function LegoGame() {
