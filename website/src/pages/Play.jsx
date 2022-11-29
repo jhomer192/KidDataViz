@@ -27,6 +27,9 @@ function Play() {
                 <Grid item sx={{width: "400px", p:2}}>
                     <a href={'/LegoGame'}> <GameDisplay name={"Lego Game"}/></a>
                 </Grid>
+                <Grid item sx={{width: "400px", p:2}}>
+                    <a href={'/OceanGame'}> <GameDisplay name={"Ocean Game"}/> </a>
+                </Grid>
 
             </Grid>
 
