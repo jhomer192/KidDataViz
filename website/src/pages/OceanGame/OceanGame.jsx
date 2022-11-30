@@ -101,6 +101,7 @@ function OceanGame() {
             <Typography sx={{ textTransform: 'none', fontSize: '32pt', m: 2, fontFamily: 'Comic Sans MS' }} >
                 Ocean Game!
             </Typography>
+           
 
 
             <Grid container
@@ -109,7 +110,10 @@ function OceanGame() {
                     padding: 2,
                     display: "flex", flexWrap: "wrap",
                 }}>
-
+                 <Typography sx={{ textTransform: 'none' ,width: "2000px", fontSize: '14pt', m: 2, fontFamily: 'Comic Sans MS' }}>
+            Click anywhere in the blue square to create fish in the ocean! Press on a fish to change the color or delete it. Press near the bottom to create Coral. If you want to change Coral to Kelp, press on the Coral again. When you are done decorating the ocean, press on the Check Data button in the bottom left corner to learn about your masterpiece! Once you are done learning about your creation, press the button again to restart and make another one!
+            </Typography>
+            
                 <Grid container sx={{
                     display: "inline", flexWrap: "no-wrap", padding: 2, mb: 2,
                     backgroundColor: '#006994',
